@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Front-End Checklist</title>
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="prism.css"/>
+</head>
+<body>
+    <nav>
+        <h1>قائمة التدقيق لمطورين واجهات الويب</h1>
+    </nav>
+    <header>
+        <img src="logo.jpg"/>
+        <p>قائمة التدقيق الشاملة لمطورين واجهات المستخدم تحتوى على عناصر قد تحتاجها او فحصها قبل اطلاق مشروعك / صفحتك.        </p>
+    </header>
+    <section class="index container">
+        <h2>الفهرس</h2>
+        <ul>
+            <li><a>العناصر الداخل Head</a></li>
+            <li><a>HTML</a></li>
+            <li><a>خطوط الويب</a></li>
+            <li><a>CSS</a></li>
+            <li><a>الصور</a></li>
+            <li><a>جافاسكربت</a></li>
+            <li><a>الحماية</a></li>
+            <li><a>الأداء</a></li>
+            <li><a>امكانية الوصول</a></li>
+            <li><a>السيو</a></li>
+            <li><a>الترجمات</a></li>
+        </ul>
+    </section>
+    <section class="how-to-use container">
+        <h2>كيفية الاستخدام؟</h2>
+        <p>جميع العناصر في القائمة يجب أن تستخدم في غالبية المشاريع، لكن بعض العناصر يمكن تجاهلها، مثلا: لا تحتاج إلى تغذية RSS في موقع خاص لإدارة المدارس.</p>
+        <p>اخترنا وجود ثلاث مراحل من العناصر وأهمية استخدامها:</p>
+        <ul>
+            <li>
+                <span class="low-icon"></span>
+                <p>يعني ان العنصر ينصح إستخدامه لكن يُمكن ان يتم اهماله في بعض الحالات.</p>
+            </li>
+            <li>
+                <span class="medium-icon"></span>
+                <p> يعني ان العنصر ينصح بشدة استخدامه، لكن يُمكن ان يهمل في بعض الحالات الخاصة، ولكن بعض العناصر إذا أُهملت يمكن ان تأثر على الأداء او SEO .</p>
+            </li>
+            <li>
+                <span class="high-icon"></span>
+                <p> يعني ان العنصر لا يمكن إهماله لأي سبب، اذا تم اهمالة سيتسبب بمشاكل في الصفحة و SEO، أولوية اختبارات الاداء تكون على هذة العناصر اولاً.</p>
+            </li>
+        </ul>
+        <p>نوع المحتوى الذي ستجده في قائمة التدقيق:</p>
+        <ul>
+            <li>توثيقات أو مقالات</li>
+            <li>أدوات اختبار</li>
+            <li>محتوى مرئي</li>
+        </ul>
+    </section>
+    <section class="head container">
+        <h2>ما يتم ضبطه داخل العنصر HEAD</h2>
+        <p>
+            <span class='high-icon'>نوع المستند</span><span>: تعريف المتصفح انك تستخدم الاصدار الخامس من لغة HTML, يوضع في اعلى الملف</span>
+            <pre dir="ltr"><code class="language-markup">&lt;!doctype html> &lt;!-- HTML5 --></code></pre>
+        </p>
+        <a class="note" href="https://wiki.hsoub.com/HTML#.D8.A8.D9.86.D9.8A.D8.A9_.D9.85.D8.B3.D8.AA.D9.86.D8.AF.D8.A7.D8.AA_HTML">تحديد ترميز الأحرف</a>
+        <p>عنصران البيانات الوصفية القادمه (Charset و Viewport) يجب ان تكونا في بداية عنصر Head</p>
+        <span class="high-icon">ترميز المحارف</span><span>: يجب على ترميز UTF-8 مكتوب بشكل صحيح</span>
+        <pre dir="ltr"><code class="language-markup">&lt;!-- تحديد ترميز الاحرف للمستند -->
+&lt;meta charset="utf-8"></code></pre>
+        <span class="high-icon">العرض</span><span>: العنصر Viewport ايضا يجب ان يكتب بشكل صحيح</span>
+        <pre dir="ltr"><code class="language-markup">&lt;!-- Viewport for responsive web design -->
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></code></pre>
+        <span class="high-icon">العنوان</span><span>: العنوان يجب ان يستخدم في كل الصفحات (سيو : محرك البحث Google يحسب عرض الحرف بالبكسل ويقطع بين 472 الى 482 بكسل, يجب ان يكون الحد الاعلى للاحرف حوالي 55 حرف).</span>
+        <pre dir="ltr"><code class="language-markup">&lt;!-- عنوان المستند -->
+&lt;title>عنوان الصفحه&lt;/title></code></pre>
+        <a href="https://wiki.hsoub.com/HTML/title">العنصر title - موسوعة حسوب</a><br/>
+        <a href="https://app.sistrix.com/en/serp-snippet-generator">اداة لفحص كيفية ظهور اسم الموقع في محركات البحث</a></br>
+        <span class="high-icon">الوصف</span><span>: يجب ان يكون الوصف فريدا من نوعه ولا يتجاوز 150 حرف.</span>
+        <pre dir="ltr"><code class="language-markup">&lt;!-- الوصف -->
+&lt;meta name="description" content="وصف الصفحة لا يتجاوز 150 حرف"></code></pre>
+        <a href="https://wiki.hsoub.com/HTML/meta#name">الوصف - موسوعة حسوب</a></br>
+        <span class="medium-icon">أَيْقُونَة</span><span>: يجب ان تظعها في عنصر Head, يمكنك استخدام الصيغة .ico ولكن ينصح الان باستخدام الصيغة PNG (الابعاد 32x32px)</span>
+        <pre dir="ltr"><code class="language-markup">&lt;!-- الصيغة الأساسية -->
+&lt;link rel="icon" type="image/x-icon" href="https://example.com/favicon.ico">
+&lt;!-- الصيغة التي ينصح بها -->
+&lt;link rel="icon" type="image/png" href="https://example.com/favicon.png"></code></pre>
+        <span class="low-icon">البيانات الوصفية لتطبيقات Apple :</span>
+        <pre dir="ltr"><code class="language-markup">&lt;!-- ايقونة Apple Touch (على الأقل 200 بكسل طولا وعرضا) -->
+&lt;link rel="apple-touch-icon" href="/custom-icon.png">
+            
+&lt;!-- لتشغيل الموقع في وضع ملء الشاشة -->
+&lt;meta name="apple-mobile-web-app-capable" content="yes">
+            
+&lt;!-- Status Bar Style (see Supported Meta Tags below for available values) -->
+&lt;!-- Has no effect unless you have the previous meta tag -->
+&lt;meta name="apple-mobile-web-app-status-bar-style" content="black"></code></pre>
+        <a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">تكوين تطبيقات الويب</a><br/>
+        <a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">البيانات الوصفية المعتمدة</a><br/>
+        <span class="low-icon">قائمة ويندوز</span><span>: من ميزات اخر اصدار من نظام ويندوز</span>
+        <pre dir="ltr"><code class="language-markup">&lt;!-- Microsoft Tiles -->
+&lt;meta name="msapplication-config" content="browserconfig.xml" /></code></pre>
+        <p>اقل ما يكتب في ملف browserconfig.xml :</p>
+        <pre dir="ltr"><code class="language-markup">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;browserconfig>
+    &lt;msapplication>
+     &lt;tile>
+        &lt;square70x70logo src="small.png"/>
+        &lt;square150x150logo src="medium.png"/>
+        &lt;wide310x150logo src="wide.png"/>
+        &lt;square310x310logo src="large.png"/>
+     &lt;/tile>
+   &lt;/msapplication>
+&lt;/browserconfig></code></pre>
+        <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/dn320426(v=vs.85)">تفاصيل أكثر</a><br/>
+        <span class="medium-icon">دمج الصفحات</span><span>: يساعد في تجنب المحتوى المتكرر</span>
+        <pre dir="ltr"><code class="language-markup">&lt;!-- Helps prevent duplicate content issues -->
+&lt;link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html</code></pre>
+        <a href="https://support.google.com/webmasters/answer/139066?hl=ar">دمج عناوين URL المتكررة</a><br/>
+        <a href="https://webmasters.googleblog.com/2013/04/5-common-mistakes-with-relcanonical.html">5 اخطاء شائعة مع rel=cononical</a>
+        <h3>العنصر HTML</h3>
+        <span class="high-icon">اللغة</span><span>: ضع رمز اللغة الاساسية التي تستخدم في الصفحه</span>
+        <pre dir="ltr"><code class="language-markup">&lt;html lang="ar"></code></pre>
+        <span class="medium-icon">اتجاه الصفحه</span><span>: في حالة اللغة العربية والعبرية والفارسية يستعمل rtl وفي الغات الاخرى يستعمل ltr</span>
+        <pre dir="ltr"><code class="language-markup">&lt;html dir="rtl"></code></pre>
+        <span class="low-icon">لغة اخرى</span><span>وضع رابط لنسخ اخرى من موقع بلغات مختلفة</span>
+        <pre dir="ltr"><code class="language-markup">&lt;link rel="alternate" href="https://es.example.com/" hreflang="tr"></code></pre>
+        <span class="low-icon">التعليقات الشرطية</span><span>التعليقات الشرطية لمتصفج IE اذا تحتاج</span><br/>
+        <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537512(v=vs.85)">التعليقات الشرطية - Microsoft</a><br/>
+        <span class="low-icon">تغذية RSS</span><span>: اذا كان مشروعك مدونة او يحتوي على مقالات, يجب توفر وصلة RSS.</span><br/>
+        <span class="medium-icon">ضغط شفرة CSS</span><span>: يجمع كل شفرة CSS في سطر واحد (تصغير).</span><br/>
+        <span class="high-icon">ترتيب ملفات CSS</span><span>يجب على كلف ملفات CSS ان تحمل قبل اي ملف JavaScript. (عدا بعض الحالات التي تحمل ملفات JavaScript بشكل غير متزامن في اعلى صفحك)</span>
+        <h3>مواقع التواصل الاجتماعي</h3>
+        <p>مشاهدة وانشاء البيانات الوصفية لمواقع التواصل الاجتماعي بشكل تلقائي مع <a href="https://metatags.io/">Meta Tags</a></p>
+        <p>بالنسبة لفيس بوك وتويتر فهما مهمين, المواقع الاجتماعيه الاخرى يمكن ان تاخذ بعين الأعتبار اذا كنت تستهدف جمهور معين.</p>
+        <span class="low-icon">فيس بوك</span><span>: الصورة يجب ان تكون على الأقل 600 في 315 بكسل, وينصح 1200 في 630 بكسل.</span>
+        <pre dir="ltr"><code class="language-markup">&lt;meta property="og:type" content="website">
+&lt;meta property="og:url" content="https://example.com/page.html">
+&lt;meta property="og:title" content="Content Title">
+&lt;meta property="og:image" content="https://example.com/image.jpg">
+&lt;meta property="og:description" content="Description Here">
+&lt;meta property="og:site_name" content="Site Name">
+&lt;meta property="og:locale" content="en_US">
+&lt;!-- Next tags are optional but recommended -->
+&lt;meta property="og:image:width" content="1200">
+&lt;meta property="og:image:height" content="630"></code></pre>
+        <a href="https://developers.facebook.com/docs/sharing/webmasters/">دليل المشاركة لمسؤولي مواقع الويب</a><br/>
+        <a href="https://developers.facebook.com/docs/sharing/best-practices/">أفضل ممارسات المشاركة لمواقع الويب وتطبيقات الهواتف المحمولة</a><br/>
+        <a href="https://developers.facebook.com/tools/debug/">أداة تصحيح أخطاء المشاركة</a>
+        <p>شكرا لفيس بوك لتوفير كل الادوات والتوثيقات مترجمة الى الغة العربية</p>
+        <span class="low-icon">تويتر :</span>
+        <pre dir="ltr"><code class="language-markup">&lt;meta name="twitter:card" content="summary">
+&lt;meta name="twitter:site" content="@site_account">
+&lt;meta name="twitter:creator" content="@individual_account">
+&lt;meta name="twitter:url" content="https://example.com/page.html">
+&lt;meta name="twitter:title" content="Content Title">
+&lt;meta name="twitter:description" content="Content description less than 200 characters">
+&lt;meta name="twitter:image" content="https://example.com/image.jpg"></code></pre>
+        <a href="docs/tweets/optimize-with-cards/guides/getting-started">التوثيق</a><br/>
+        <a href="https://cards-dev.twitter.com/validator">اداة فصح التوافق لبطاقات تويتر</a>
+        <h2>HTML</h2>
+        <h3>افضل الممارسات</h3>
+        <span class="high-icon">دلالات لفظية</span><span>: يجب ان تستعمل عناصر التي تحتوي دلالات لفظية بشكل مناسب مثل (header, footer, section, main ...)</span><br/>
+        <a href="https://htmlreference.io/">مرجع</a><br/>
+        <span class="high-icon">صفحات الخطأ</span><span>    : يجب على صفحات الاخطاء 404 و5xx ان تكون متوفر, تذكر صفحه خطا 5xx يجب ان تحتوي على شفرة CSS داخلية.</span><br/>
+        <span class="medium-icon">خاصية Noopener</span><span>: في حالة تم استخداك رابط خارجي مع target="_blank", يجب ان يحتوي على خاصية rel="noopener" في الصفحه السابقة, اذا كنت تحتاج دعم الاصدارات القديمة من متصفح فايرفوكس, استخدم rel="noopener noreferrer".</span><br/>
+        <span class="low-icon">تنضيف تعليقات</span><span>: احذف جميع التعليقات والشفرات الغير مستخدمة</span>
+        <h3>اختبار HTML</h3>
+        <span class="high-icon">اختبار W3C</span><span>: جميع الصفحات يجب ان تفحص على W3C وتحديد الاخطاء المحتملة.</span><br/>
+        <a href="https://validator.w3.org">اختبار W3C</a><br/>
+        <span class="high-icon">فحوصات اخرى</span><span>: استخدام ادوات لتحليل اي خطأ قد يوجد في شفرة HTML</span><br/>
+        <a href="https://www.10bestdesign.com/dirtymarkup/">اداة Dirty Markup</a><br/>
+        <a href="https://webhint.io/">موقع webhint</a><br/>
+        <span class="high-icon">مدقق الارتباط</span><span>: فحص عدم وجود رابط لا يعمل, تاكد من عدم وجود خطأ 404.</span><br/>
+        <a href="https://validator.w3.org/checklink">مدقق الروابط</a><br/>
+        <span class="high-icon">مانع الاعلانات</span><span>: يجب على موقعك ان يظهر بشكل صحيح اثناء استعمال مانع اعلانات (يجب توفير رسالة تشجع الزائر على اغلاق مانع الاعلانات).</span><br/>
+        <a href="https://andreicioara.com/use-adblocking-in-your-dev-environment-48db500d9b86">استخدام مانع الاعلانات في بيئة التطوير</a>
+        <h2>خطوط الويب</h2>
+        <p>ملاحظة : استخدام خطوط ويب قد يسبب مشاكل في النص - خذ في عين الاعتبار ان يكون لديك خط احتياطي (اساسي في كل الاجهزة مثل Arial).</p>
+        <a href="https://developers.google.com/fonts/docs/technical_considerations">اعتبارات فنية يجب  ان تاخذها في عين الاعتبار</a><br/>
+        <span class="high-icon">صيغ خطوط الويب</span><span>: الصيغ الاتية WOFF و WOFF2 و TTF مدعومة في جميع المتصفحات الحديثة.</span><br/>
+        <a href="https://caniuse.com/#feat=woff2">دعم WOFF في المتصفحات</a><br/>
+        <a href="https://caniuse.com/#feat=woff2">دعم WOFF2 في المتصفحات</a></br/>
+        <a href="https://caniuse.com/#feat=ttf">دعم TTF/OTF في المتصفحات</a><br/>
+        <a href="https://css-tricks.com/snippets/css/using-font-face/">استخدام @font-face</a><br/>
+        <span class="high-icon">حجم ملف الخط</span><span>: يجب ان لا يتجاوز 2MB</span><br/>
+        <span class="low-icon">تحميل خطوط الويب</span><span>: التحكم بسلوك التحميل</span><br/>
+        <a href="https://github.com/typekit/webfontloader">Typekit Web Font Loader</a>
+        <h2>CSS</h2>
+        <p>ملاحظة : اذا كان لديك شك في خاصية يمكنك زيارة <a href="https://wiki.hsoub.com/CSS">التوثيق</a></p>
+        <span class="high-icon">تصميم ويب متجاوب</span><span>: يجب على التصميم ان يكون متجاوب.</span><br/>
+        <span class="medium-icon">تصميم الطباعة</span><span>يجب كتابة تصميم خاص لنسخه الطباعه من موقعك</span><br/>
+        <span class="low-icon">المعالجة الاولية</span><span>: مشروعك يستخدم (<a href="https://wiki.hsoub.com/Sass">Sass</a>, Less, Stylus).</span><br/>
+        <span class="high-icon">ID مميز</span><span>: اذا استخدم خاصية ID, يجب ان تكون مميزة</span><br/>
+        <span class="high-icon">اعادة تعيين CSS</span><span>: ابو خدوداستخدام احد هذة الملفات (reset ,Normalize , reboot) ويجب ان تكون باخر اصدار (اذا كنت تستخدم اطار عمل مثل Bootstrap او Foundation يكون ملف Normalize متضمن بالفعل).</span>
+        <ul>
+            <li><a href="https://meyerweb.com/eric/tools/css/reset/">Reset.css</a></li>
+            <li><a href="https://necolas.github.io/normalize.css/">Normalize.css</a></li>
+            <li><a href="https://getbootstrap.com/docs/4.0/content/reboot/">Reboot</a></li>
+            <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+            <li><a href="https://foundation.zurb.com/">Foundation</a></li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <!-- Javascript -->
+    <script src="prism.js"></script>
+</body>
+</html>
