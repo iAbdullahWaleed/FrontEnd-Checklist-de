@@ -1,5 +1,11 @@
 body{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Cairo', sans-serif;height: 20000px}
 a{text-decoration: none;color:green;border-bottom: 1px solid green}
+img
+{
+  border: 10px solid #fff;
+  box-shadow: 0 0 10px #d6d6d6;
+  margin: 20px auto;
+}
 /* Navbar */
 nav
 {
