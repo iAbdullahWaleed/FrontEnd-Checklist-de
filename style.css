@@ -86,3 +86,11 @@ header
     padding: 0 5px;
     margin: 0 5px;
 }
+.note
+{
+  background-color: #ff8d11;
+  border-radius: 50px;
+  color: #fff;
+  padding: 10px;
+  text-align: center
+}
