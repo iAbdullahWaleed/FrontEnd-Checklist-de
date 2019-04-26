@@ -1,13 +1,14 @@
-body{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Cairo', sans-serif;height: 20000px}
+body{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Cairo', sans-serif;}
 a{text-decoration: none;color:green;border-bottom: 1px solid green}
-img
+section img
 {
   border: 10px solid #fff;
   box-shadow: 0 0 10px #d6d6d6;
   margin: 20px auto;
+  width: 70%;
 }
 /* Navbar */
-nav
+nav , footer
 {
     text-align: center;
     box-shadow: 0 -9px 46px #d6d6d6;
@@ -93,4 +94,23 @@ header
   color: #fff;
   padding: 10px;
   text-align: center
+}
+.github
+{
+  width: 100%;
+  height: 100px;
+  text-align: center
+}
+.github a
+{
+  border: none
+}
+.github img
+{
+  width: 80px;
+  padding: 10px;
+}
+footer
+{
+  margin-top: 20px;
 }
