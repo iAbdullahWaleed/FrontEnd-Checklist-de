@@ -5,7 +5,7 @@ section img
   border: 10px solid #fff;
   box-shadow: 0 0 10px #d6d6d6;
   margin: 20px auto;
-  width: 70%;
+  width:300px;
 }
 /* Navbar */
 nav , footer
