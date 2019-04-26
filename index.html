@@ -283,7 +283,7 @@
         <a href="https://letsencrypt.org/">Let's Encrypt - Free SSL/TLS Certificates</a><br/>
         <a href="https://www.ssllabs.com/ssltest/index.html">Free SSL Server Test</a><br/>
         <a href="https://caniuse.com/#feat=stricttransportsecurity">Strict Transport Security</a>
-        <h2 class="note">"لم أتم ترجمه قسم الحماية لعدم خبرتي في المصطلحات المجال ولا فهم للتقنيات"</h2>
+        <h2 class="note-un">"لم أتم ترجمه قسم الحماية لعدم خبرتي في المصطلحات المجال ولا فهم للتقنيات"</h2>
         <h2>الاداء</h2>
         <h3>افضل الممارسات</h3>
         <span class="medium-icon">اهداف لتحقيقها</span>
@@ -299,68 +299,78 @@
         <a href="https://tools.ietf.org/html/rfc6265">Cookie specification: RFC 6265</a><br/>
         <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">Cookies</a><br/>
         <a href="http://browsercookielimits.squawky.net/">Browser Cookie Limits</a><br/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- 
- 
- 
+        <span class="medium-icon">مكونات الطرف الثالث</span><span>مكونات الطرف الثالث مثل iframe او مكونات تعتمد على شفرة JS خارجيه يجب ان تستبدل بمكونات ثابته داخليه عند الامكان</span><br/>
+        <a href="https://simplesharingbuttons.com/">Simple sharing buttons generator</a>
+        <h3>اعداد الطلبات القادمه</h3>
+        <p>اعطاء المتصفح تلميح على المحتويات التي سيحتاجها المستخدم للتحميل في الصفحات القادمه.</p>
+        <span class="low-icon">التحميل المسبق لـDNS</span><span>: اخبار المتصفح بان هناك رابط معلين يجب ان تبحث عن عنوان IP الخاص به, فلن نحتاج الى الانتظار للبحث عن IP عند الحاجه للصفحة.</span>
+        <pre dir="ltr"><code class="language-markup">&lt;link rel="dns-prefetch" href="https://example.com">
+</code></pre>
+        <span class="low-icon">الاتصال المسبق</span><span>: يستخدم نفس الطريقة السابقة ولكن مع TCP و TLS</span><br/>
+        <pre dir="ltr"><code class="language-markup">&lt;link rel="preconnect" href="http://css-tricks.com"></code></pre>
+        <span class="low-icon">الجلب المسبق</span><span>: اذا كان هناك اي محتوى يحتاجه المستخدم مستقبلا, مثلا اذا أشرت الى قميص في محل الملابس فصاخب المحال سيقوم بانزال القياسات الاخرى لنفس القميص, يمكن ان يكون المحتوى صورة او سكربت.</span>
+        <pre dir="ltr"><code class="language-markup">&lt;link rel="prefetch" href="image.png"></code></pre>
+        <span class="low-icon">العرض المسبق</span><span>انه القنبله النووية, يعطينا القابلية على تحميل كل الملفات والمحتوى لرابط معين.</span>
+        <pre dir="ltr"><code class="language-markup">&lt;link rel="prerender" href="http://css-tricks.com"></code></pre>
+        <a href="https://css-tricks.com/prefetching-preloading-prebrowsing/">مقالة من CSS Tricks لفهم اكبر</a>        
+        <h3>فحص الاداء</h3>
+        <ul>
+            <li><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed</a></li>
+            <li><a href="https://testmysite.withgoogle.com/">Test your mobile speed with Google</a></li>
+            <li><a href="https://www.webpagetest.org/">WebPagetest - Website Performance and Optimization Test</a></li>
+            <li><a href="https://gtmetrix.com/">GTmetrix - Website speed and performance optimization</a></li>
+            <li><a href="https://speedrank.app/">Speedrank - Improve the performance of your website</a></li>
+        </ul>
+        <h2>إمكانية الوصول</h2>
+        <p>يمكنك مشاهدة الدورة التالية <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">A11ycasts مع Rob Dodson</a></p>
+        <h3>افضل الممارسات</h3>
+        <span class="medium-icon">بدون JavaScript</span><span>: غالبية العمليات يجب ان تعمل بدون شفرة Javascript مثل البحث والتنقل.</span><br/>
+        <a href="https://www.youtube.com/watch?v=kBmvq2cE0D8">Enable / Disable JavaScript in Chrome Developer Tools</a><br/>
+        <span class="medium-icon">تباين الألوان</span><span>تناسق الالوان مهم ويمكنك قياسه في الاداة ادناه, او استعمل عيناك.</span><br/>
+        <a href="https://contrast-ratio.com">Contrast ratio</a>
+        <h3>العناوين</h3>
+        <span class="high-icon">العنصر H1</span><span>: كل الصفحات يجب ان تحتوي على H1 ولا يجب ان يكون مشابها للـtitle.</span><br/>
+        <span class="high-icon">العناوين</span><span>: يجب ان تستخدم بشكل بصورة صحيحه وبترتيب صحيح (h1-h6).</span><br/>
+        <a href="https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">Why headings and landmarks are so important -- A11ycasts #18</a>
+        <h3>دلالات</h3>
+        <span class="high-icon">تخصيص نوع الادخال</span><span>تخصيص نوع البيانات المدخله مهم جدا وخاصة للهواتف.</span><br/>
+        <a href="http://mobileinputtypes.com/">Mobile Input Types</a>
+        <pre dir="ltr"><code class="language-markup">&lt;input type="date"></code></pre>
+        <img src="Input.png"/>
+        <h3>استمارة</h3>
+        <span class="high-icon">العنصر Label</span><span>: عنصر Label يجب ان يكون مرفق مع كل عنصر ادخال</span>
+        <h3>اختبارات إمكانية الوصول</h3>
+        <span class="high-icon">إختبار معايير امكانية الوصول</span><span>: استخدم الأداة WAVE.</span><br/>
+        <a href="http://wave.webaim.org/">Wave</a><br/>
+        <span class="high-icon">لوحة المفاتيح</span><span>: فحص موقعك اثناء وجود لوحة المفاتيح, كل العناصر قابلة للوصول والاستعمال.</span><br/>
+        <span class="high-icon">التركيز</span><span>: استعمال خاصية التركيز (Focus) لدعم اجهزة Screen Reader.</span><br/>
+        <a href="https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">Managing Focus - A11ycasts #22</a>
+        <h2>تحسين محركات البحث (SEO)</h2>
+        <span class="high-icon">تحليلات Google</span><span>: تحليلات Google تم تفعليه في الموقع.</span><br/>
+        <a href="https://analytics.google.com/analytics/web/provision/?authuser=0#/provision">Google Analytics</a><br/>
+        <a href="http://www.gachecker.com/">GA Cheaker</a><br/>
+        <span class="medium-icon">منطق العناوين</span><span>العناوين يجب ان تساعد لفهم محتوى الصفحه</span><br/>
+        <a href="http://khan.github.io/tota11y/#Try-it">Tota11y, tab Headings</a><br/>
+        <span class="high-icon">ملف sitemap.xml</span><span>: ملف sitemap.xml موجود.</span><br/>
+        <a href="https://websiteseochecker.com/html-sitemap-generator/">Sitemap generator</a><br/>
+        <span class="high-icon">ملف robots.xml</span><span>: ملف robots.xml لا يحظر الصفحه.</span><br/>
+        <a href="https://varvy.com/robottxt.html">The robots.txt file</a><br/>
+        <a href="https://www.google.com/webmasters/tools/robots-testing-tool?pli=1">فحص ملف robots.xml</a><br/>
+        <span class="high-icon">البيانات المنظَّمة</span><span>الصفحات التي تستخدم البيانات المنظمة تم فحصها وبدون اخطاء</span><br/>
+        <a href="https://developers.google.com/search/docs/guides/intro-structured-data">التعرّف على آلية عمل البيانات المنظَّمة - Google</a><br/>
+        <a href="https://rdfa.info/">RDFa - Linked Data in HTML</a><br/>
+        <a href="https://json-ld.org/">JSON-LD</a><br/>
+        <a href="https://www.w3.org/TR/microdata/">Microdata</a><br/>
+        <a href="https://developers.google.com/structured-data/testing-tool/">Structured Data Testing Tool</a><br/>
+        <a href="http://schema.org/docs/full.html">Schema.org Full Hierarchy</a><br/>
+        <span class="medium-icon">خريطة الموقع</span><span>: صفحه تعتبر فهرست للموقع يكون متوفر رابطها في اسفل الموقع.</span><br/>
+        <a href="https://support.google.com/webmasters/answer/183668?hl=ar">إنشاء ملف Sitemap وإرساله - Google</a><br/>
+        <span class="high-icon">توفير روابط لترقيم الصفحات</span><span>: توفير rel="prev" و rel="next".</span>
+        <pre dir="ltr"><code class="language-markup">&lt;!-- مثال : توفير صفحات الترقيم للصفحه الثانية -->
+&lt;link rel="prev" href="https://example.com/?page=1">
+&lt;link rel="next" href="https://example.com/?page=3"></code></pre>
+        <h2>الترجمات</h2>
+        
  
  
  
