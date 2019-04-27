@@ -28,17 +28,17 @@
     <section class="index container">
         <h2>الفهرس</h2>
         <ul>
-            <li><a>العناصر الداخل Head</a></li>
-            <li><a>HTML</a></li>
-            <li><a>خطوط الويب</a></li>
-            <li><a>CSS</a></li>
-            <li><a>الصور</a></li>
-            <li><a>جافاسكربت</a></li>
-            <li><a>الحماية</a></li>
-            <li><a>الأداء</a></li>
-            <li><a>امكانية الوصول</a></li>
-            <li><a>السيو</a></li>
-            <li><a>الترجمات</a></li>
+            <li><a href="#head">العناصر الداخل Head</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#webfonts">خطوط الويب</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#images">الصور</a></li>
+            <li><a href="#js">جافاسكربت</a></li>
+            <li><a href="#sec">الحماية</a></li>
+            <li><a href="#performance">الأداء</a></li>
+            <li><a href="#access">امكانية الوصول</a></li>
+            <li><a href="#seo">السيو</a></li>
+            <li><a href="#translation">الترجمات</a></li>
         </ul>
     </section>
     <section class="how-to-use container">
@@ -67,7 +67,7 @@
         </ul>
     </section>
     <section class="head container">
-        <h2>ما يتم ضبطه داخل العنصر HEAD</h2>
+        <h2 id="head">ما يتم ضبطه داخل العنصر HEAD</h2>
         <p>
             <span class='high-icon'>نوع المستند</span><span>: تعريف المتصفح انك تستخدم الاصدار الخامس من لغة HTML, يوضع في اعلى الملف</span>
             <pre dir="ltr"><code class="language-markup">&lt;!doctype html> &lt;!-- HTML5 --></code></pre>
@@ -167,7 +167,7 @@
 &lt;meta name="twitter:image" content="https://example.com/image.jpg"></code></pre>
         <a href="docs/tweets/optimize-with-cards/guides/getting-started">التوثيق</a><br/>
         <a href="https://cards-dev.twitter.com/validator">اداة فصح التوافق لبطاقات تويتر</a>
-        <h2>HTML</h2>
+        <h2 id="html">HTML</h2>
         <h3>افضل الممارسات</h3>
         <span class="high-icon">دلالات لفظية</span><span>: يجب ان تستعمل عناصر التي تحتوي دلالات لفظية بشكل مناسب مثل (header, footer, section, main ...)</span><br/>
         <a href="https://htmlreference.io/">مرجع</a><br/>
@@ -184,7 +184,7 @@
         <a href="https://validator.w3.org/checklink">مدقق الروابط</a><br/>
         <span class="high-icon">مانع الاعلانات</span><span>: يجب على موقعك ان يظهر بشكل صحيح اثناء استعمال مانع اعلانات (يجب توفير رسالة تشجع الزائر على اغلاق مانع الاعلانات).</span><br/>
         <a href="https://andreicioara.com/use-adblocking-in-your-dev-environment-48db500d9b86">استخدام مانع الاعلانات في بيئة التطوير</a>
-        <h2>خطوط الويب</h2>
+        <h2 id="webfonts">خطوط الويب</h2>
         <p>ملاحظة : استخدام خطوط ويب قد يسبب مشاكل في النص - خذ في عين الاعتبار ان يكون لديك خط احتياطي (اساسي في كل الاجهزة مثل Arial).</p>
         <a href="https://developers.google.com/fonts/docs/technical_considerations">اعتبارات فنية يجب  ان تاخذها في عين الاعتبار</a><br/>
         <span class="high-icon">صيغ خطوط الويب</span><span>: الصيغ الاتية WOFF و WOFF2 و TTF مدعومة في جميع المتصفحات الحديثة.</span><br/>
@@ -195,7 +195,7 @@
         <span class="high-icon">حجم ملف الخط</span><span>: يجب ان لا يتجاوز 2MB</span><br/>
         <span class="low-icon">تحميل خطوط الويب</span><span>: التحكم بسلوك التحميل</span><br/>
         <a href="https://github.com/typekit/webfontloader">Typekit Web Font Loader</a>
-        <h2>CSS</h2>
+        <h2 id="css">CSS</h2>
         <p>ملاحظة : اذا كان لديك شك في خاصية يمكنك زيارة <a href="https://wiki.hsoub.com/CSS">التوثيق</a></p>
         <span class="high-icon">تصميم ويب متجاوب</span><span>: يجب على التصميم ان يكون متجاوب.</span><br/>
         <span class="medium-icon">تصميم الطباعة</span><span>يجب كتابة تصميم خاص لنسخه الطباعه من موقعك</span><br/>
@@ -237,7 +237,7 @@
         <span class="high-icon">قراءة الاتجاه</span><span>: دعم اللغات التي تقرا من اليمين اليسار.</span><br/>
         <a href="https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/">Building RTL-Aware Web Apps & Websites: Part 1 - Mozilla Hacks</a><br/>
         <a href="https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2/">Building RTL-Aware Web Apps & Websites: Part 2 - Mozilla Hacks</a>
-        <h2>الصور</h2>
+        <h2 id="images">الصور</h2>
         <p>لفهم اكثر في عملية تجاوب الصور, اقرا الكتاب الالكتروني <a href="https://images.guide/">Essential Image Optimization</a> من عدي عثماني</p>
         <h3>افضل الممارسات</h3>
         <span>تجاوب</span><span>: كل الصور يجب ان تظهر في الصفحه في احسن صورة, بعض الادوات التي ستساعدك :</span>
@@ -260,7 +260,7 @@
         <span class="high-icon">نص بديل</span><span>: كل الصور يجب ان تحتوي على نص بديل يفسر الصورة اذا حدث خطأ في تحميلها.</span><br/>
         <span class="medium-icon">التحميل الكسول</span><span>: توفير خاصية التحميل الكسول في موقعك, مثال :</span>
         <img src="B1.jpg"/>
-        <h2>Javascript</h2>
+        <h2 id="js">Javascript</h2>
         <h3>افضل الممارسات</h3>
         <span class="high-icon">شفرة جافاسكربت في النسق</span><span>: عدم استعمال اي شفرة جافاسكربت مع شفرات HTML.</span><br/>
         <span class="high-icon">دمج</span><span>: دمج الملفات بشكل متسلسل.</span><br/>
@@ -284,7 +284,7 @@
         <a href="https://modernizr.com/download?setclasses">Customize your Modernizr</a><br/>
         <span class="high-icon">اداة ESLint</span><span>: عدم وجود اخطاء تم اعلامها من قبل ESLint (بناء على القواعد او المعايير الخاصة بك.</span><br/>
         <a href="https://eslint.org/">ESLint - The pluggable linting utility for JavaScript and JSX</a>
-        <h2>الحماية</h2>
+        <h2 id="sec">الحماية</h2>
         <h3>الفحص والتحقق من موقعك</h3>
         <a href="https://securityheaders.com/">SecurityHeaders</a><br/>
         <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a><br/>
@@ -293,7 +293,7 @@
         <a href="https://www.ssllabs.com/ssltest/index.html">Free SSL Server Test</a><br/>
         <a href="https://caniuse.com/#feat=stricttransportsecurity">Strict Transport Security</a>
         <h2 class="note-un">"لم أتم ترجمه قسم الحماية لعدم خبرتي في المصطلحات المجال ولا فهم للتقنيات"</h2>
-        <h2>الاداء</h2>
+        <h2 id="performance">الاداء</h2>
         <h3>افضل الممارسات</h3>
         <span class="medium-icon">اهداف لتحقيقها</span>
         <ul>
@@ -330,7 +330,7 @@
             <li><a href="https://gtmetrix.com/">GTmetrix - Website speed and performance optimization</a></li>
             <li><a href="https://speedrank.app/">Speedrank - Improve the performance of your website</a></li>
         </ul>
-        <h2>إمكانية الوصول</h2>
+        <h2 id="access">إمكانية الوصول</h2>
         <p>يمكنك مشاهدة الدورة التالية <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">A11ycasts مع Rob Dodson</a></p>
         <h3>افضل الممارسات</h3>
         <span class="medium-icon">بدون JavaScript</span><span>: غالبية العمليات يجب ان تعمل بدون شفرة Javascript مثل البحث والتنقل.</span><br/>
@@ -354,7 +354,7 @@
         <span class="high-icon">لوحة المفاتيح</span><span>: فحص موقعك اثناء وجود لوحة المفاتيح, كل العناصر قابلة للوصول والاستعمال.</span><br/>
         <span class="high-icon">التركيز</span><span>: استعمال خاصية التركيز (Focus) لدعم اجهزة Screen Reader.</span><br/>
         <a href="https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g">Managing Focus - A11ycasts #22</a>
-        <h2>تحسين محركات البحث (SEO)</h2>
+        <h2 id="seo">تحسين محركات البحث (SEO)</h2>
         <span class="high-icon">تحليلات Google</span><span>: تحليلات Google تم تفعليه في الموقع.</span><br/>
         <a href="https://analytics.google.com/analytics/web/provision/?authuser=0#/provision">Google Analytics</a><br/>
         <a href="http://www.gachecker.com/">GA Cheaker</a><br/>
@@ -378,7 +378,7 @@
         <pre dir="ltr"><code class="language-markup">&lt;!-- مثال : توفير صفحات الترقيم للصفحه الثانية -->
 &lt;link rel="prev" href="https://example.com/?page=1">
 &lt;link rel="next" href="https://example.com/?page=3"></code></pre>
-        <h2>الترجمات</h2>
+        <h2 id="translation">الترجمات</h2>
         <ul>
             <li><a href="https://github.com/thedaviddias/Front-End-Checklist">الانجليزية</a></li>
             <li><a href="https://github.com/miya0001/Front-End-Checklist">اليابانية</a></li>
