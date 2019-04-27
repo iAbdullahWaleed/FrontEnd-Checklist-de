@@ -1,5 +1,6 @@
 body{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Cairo', sans-serif;}
-a{text-decoration: none;color:green;border-bottom: 1px solid green}
+a{text-decoration: none;color:#2d87e2;border-bottom: 1px solid #2d87e2; transition: all .2s ease-in-out}
+a:hover{color: #316192;border-bottom: 1px solid #316192}
 section img
 {
   border: 10px solid #fff;
