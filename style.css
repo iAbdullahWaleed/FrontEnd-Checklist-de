@@ -80,7 +80,7 @@ header
 }
 .low-icon::after
 {
-    content:'واطئ';
+    content:'منخفض';
     color: #8ed15f;
     font-weight: bold;
     font-size: 10px;
